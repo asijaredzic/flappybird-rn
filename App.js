@@ -4,9 +4,11 @@ import Bird from './src/components/Bird';
 import { useEffect, useState } from 'react';
 
 export default function App() {
+  const [birdColor, serBirdColor] = useState('red');
+
   const screenWidth = Dimensions.get('screen').width;
   const screenHeight = Dimensions.get('screen').height;
-  
+
   const birdLeft = screenWidth / 2;
   const [birdBottom, setBirdBottom] = useState(screenHeight / 2);
   const gravity = 3;
@@ -26,7 +28,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Bird birdBottom={birdBottom} birdLeft={birdLeft}/>
+      <Bird birdBottom={birdBottom} birdLeft={birdLeft} birdColor={birdColor}/>
     </View>
   );
 }
