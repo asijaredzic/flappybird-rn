@@ -6,16 +6,17 @@ const Bird = ({ birdBottom, birdLeft, birdColor }) => {
     const birdHeight = 50;
 
     return (
-        <View 
+        <Image 
             style={{
                 position: 'absolute',
-                backgroundColor: birdColor,
                 width: birdWidth,
                 height: birdHeight,
                 left: birdLeft - birdWidth / 2,
                 bottom: birdBottom - birdHeight / 2,
             }}
-        />
+        source={require('../../assets/bird1.png')}
+        resizeMode="stretch"
+        ></Image>
     );
 };
 
